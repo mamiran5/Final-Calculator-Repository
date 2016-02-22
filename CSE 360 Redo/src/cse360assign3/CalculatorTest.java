@@ -104,6 +104,16 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory()
 	{
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(14);
+		calc.subtract(8);
+		calc.multiply(3);
+		calc.divide(9);
+		calc.add(128);
+		
+		String check = calc.getHistory();
+		String actual = "0 + 14 - 8 * 3 / 9 + 128";
+		
+		assertEquals(actual, check);
 	}
 }

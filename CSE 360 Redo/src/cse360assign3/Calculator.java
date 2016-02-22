@@ -3,6 +3,7 @@ package cse360assign3;
 public class Calculator {
 
 	private int total;
+	private String history;
 	
 	/** This is a constructor that allows for a new value to be calculated from 0.
 	*
@@ -12,6 +13,7 @@ public class Calculator {
 	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	/** This returns the final value obtained after calculations
@@ -34,6 +36,7 @@ public class Calculator {
 	public void add (int value)
 	{
 		total = total + value;
+		history = history + " + " + value;
 	}
 	
 	/** This subtracts a number from the current total
@@ -45,6 +48,7 @@ public class Calculator {
 	public void subtract (int value)
 	{
 		total = total - value;
+		history = history + " - " + value;
 	}
 	
 	/** This multiplies the current total by a number
@@ -56,6 +60,7 @@ public class Calculator {
 	public void multiply (int value)
 	{
 		total = total * value;
+		history = history + " * " + value;
 	}
 	
 	/** This divides the current total by a number
@@ -74,6 +79,8 @@ public class Calculator {
 		{
 			total = total / value;
 		}
+
+		history = history + " / " + value;
 	}
 	
 	/** This prints the entire history of the calculations done on the total
@@ -82,7 +89,8 @@ public class Calculator {
 	* @return String Returns the history of the calculations as a string to see what was done on the total
 	*/
 	
-	public String getHistory () {
-		return "";
+	public String getHistory ()
+	{
+		return history;
 	}
 }
