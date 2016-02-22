@@ -20,9 +20,9 @@ public class Calculator {
 	* @return int returns the total value calculated
 	*/
 	
-	public int getTotal()
+	public int getTotal ()
 	{
-		return 0;
+		return total;
 	}
 	
 	/** This adds a number to the current total
@@ -33,7 +33,7 @@ public class Calculator {
 	
 	public void add (int value)
 	{
-
+		total = total + value;
 	}
 	
 	/** This subtracts a number from the current total
@@ -44,7 +44,7 @@ public class Calculator {
 	
 	public void subtract (int value)
 	{
-
+		total = total - value;
 	}
 	
 	/** This multiplies the current total by a number
@@ -55,7 +55,7 @@ public class Calculator {
 	
 	public void multiply (int value)
 	{
-
+		total = total * value;
 	}
 	
 	/** This divides the current total by a number
@@ -66,7 +66,14 @@ public class Calculator {
 	
 	public void divide (int value)
 	{
-
+		if(value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+			total = total / value;
+		}
 	}
 	
 	/** This prints the entire history of the calculations done on the total
